@@ -22,7 +22,39 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 div.field_with_errors {
   display: contents;
 
-  input {
-    border: 2px solid red;
+  input,
+  textarea {
+    @extend .is-invalid;
   }
+}
+
+// 共通
+.base-container {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
+}
+
+body {
+  padding-top: 56px;
+}
+
+// テーブル
+th,
+td {
+  vertical-align: middle !important;
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+// フラッシュ
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
 }
