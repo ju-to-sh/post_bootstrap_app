@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to post, notice: "投稿しました"
+      redirect_to @post, notice: "投稿しました"
     else
       flash.now[:alert] = "投稿に失敗しました"
       render :new
